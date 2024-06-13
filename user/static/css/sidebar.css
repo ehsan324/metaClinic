@@ -1,0 +1,129 @@
+:root {
+    --text-color: whitesmoke;
+    --primary-color: #36393f;
+    --secondary-color: #202225;
+    --logo: #3ba55d;
+    
+    --transition1: 1s;
+    --transition2: ease-in-out 0.7s;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+    /* outline: 1px solid cyan; */
+    
+    font-family: monospace;
+    color: var(--text-color);
+    font-size: 1.1rem;
+  }
+  
+  .sidebody {
+    background: var(--primary-color);
+    height: 1000px;
+    min-width: 100px;
+  }
+  
+  nav {
+    background: var(--secondary-color);
+    
+    height: 100vh; 
+    
+    position: fixed;
+  
+    padding: 10px 15px;
+      
+  }
+  
+  nav header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  nav header > .box {
+    background: var(--logo);
+  }
+  
+  nav ul {
+    list-style: none;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    
+    height: 100%;
+    width: 100%;
+    
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-min {
+   width: 80px; 
+   transition: var(--transition2);
+  }
+  
+  .nav-min h1, .nav-min span {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition1);
+  }
+  
+  .nav-max { 
+    width: 300px;
+    transition: var(--transition2);
+  }
+  
+  .nav-max span, .nav-max h1 {
+  /*   overflow: clip; */
+    opacity: 1;
+    transition: 3s;
+  }
+  
+  #toggle-nav-btn {
+    right: -12px;
+    position: absolute;
+    border: solid grey 2px;
+  }
+  
+  
+  /* ==shapes== */
+  .box {
+    background: var(--primary-color);
+    min-width: 50px; max-width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  
+  .circle {
+    background: var(--primary-color);
+    width: 25px; height: 25px;
+    border-radius: 50%;
+  }
+  
+  nav hr {
+    background: var(--primary-color);
+    width: 95%; height: 3px;
+    
+    display: block;
+    
+    border-radius: 196px;
+    border: none;
+    
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1, span {
+    overflow: clip;  
+  }
+  
+  
